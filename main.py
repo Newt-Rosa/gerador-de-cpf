@@ -26,12 +26,8 @@ while True:
                 print('Digite apenas números')
                 input('Aperte enter para continuar')
                 continue
-            if len(input_cpf_bruto) < 9:
-                print('Digite pelo menos 9 números')
-                input('Aperte enter para continuar')
-                continue
-            if len(input_cpf_bruto) > 11:
-                print('Digite no máximo 11 números')
+            if len(input_cpf_bruto) >= 12 or len(input_cpf_bruto) <= 10:
+                print('Digite apenas 11 números')
                 input('Aperte enter para continuar')
                 continue
             entrada_repetida = input_cpf_bruto == input_cpf_bruto[0] * len(input_cpf_bruto)
@@ -105,4 +101,4 @@ while True:
             novo_cpf = primeiros_dez_digitos + str(digito_dois)
             print(f'CPF: {novo_cpf}')
             input('Aperte enter para continuar')
-            break   
+            break    
